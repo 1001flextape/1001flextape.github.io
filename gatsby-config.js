@@ -1,17 +1,11 @@
 /**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
-
-/**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: "/ministryware", // Add this line
+  pathPrefix: "/ministryware",
   siteMetadata: {
     title: `MinistryWare`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: "MinistryWare helps communities share faith and connect through innovative, faith-based software solutions.",
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
@@ -29,27 +23,53 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `MinistryWare.org`,
+        short_name: `MinistryWare`,
         start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        // Replace this with a valid PNG, as Gatsby prefers PNG files
+        icon: `static/favicon/android-chrome-512x512.png`, // Main PNG icon
+        icons: [
+          {
+            src: `static/favicon/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `static/favicon/android-chrome-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+          {
+            src: `static/favicon/apple-touch-icon.png`,
+            sizes: `180x180`,
+            type: `image/png`,
+          },
+          {
+            src: `static/favicon/favicon-16x16.png`,
+            sizes: `16x16`,
+            type: `image/png`,
+          },
+          {
+            src: `static/favicon/favicon-32x32.png`,
+            sizes: `32x32`,
+            type: `image/png`,
+          },
+        ],
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `great vibes\:400`, // specify weights you need
-          `inter\:400`, // include Inter font
+          `great vibes\:400`,
+          `inter\:400`,
           `jacquarda bastarda 9\:400`,
         ],
         display: 'swap',
       },
     },
   ],
-}
+};
