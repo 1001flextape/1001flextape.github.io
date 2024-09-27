@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { AppBar, Tabs, Tab, Toolbar, Typography, styled, useMediaQuery } from '@mui/material';
+import { AppBar, Tabs, Tab, Toolbar, Typography, styled, useMediaQuery, Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { useLocation, navigate } from '@reach/router'; // For Gatsby, @reach/router is used
 
@@ -7,6 +7,8 @@ import ArcadeIcon from '@mui/icons-material/Gamepad';
 import SoftwareIcon from '@mui/icons-material/Business';
 import AboutIcon from '@mui/icons-material/Info';
 import DonateIcon from '@mui/icons-material/AttachMoney';
+
+import logo from "../images/ministry-ware-logo.png";
 
 // Access the pathPrefix from the Gatsby global variable
 const pathPrefix = typeof __PATH_PREFIX__ !== "undefined" ? __PATH_PREFIX__ : "";
@@ -16,6 +18,13 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: '#1AA6B7', // Hover effect for Tabs
   boxShadow: '0 2px 10px rgba(0, 0, 0, 0.3)', // Shadow for AppBar
 }));
+
+const BrandingText = styled(Typography)({
+  // Add text stroke effect
+  WebkitTextStroke: '1px rgba(0, 0, 0, 0.7)', // Adjust the opacity to achieve a softer black
+  fontWeight: 'bold', // Set a high font weight
+});
+
 
 // Styled Tabs
 const StyledTabs = styled(Tabs)(({ theme }) => ({
@@ -77,9 +86,13 @@ const TopNav = () => {
           maxWidth: "var(--size-content)",
         }}
       >
-        <Typography variant="h6" style={{ color: '#DAECF3', fontWeight: 'bold' }}>
+        {/* <Typography variant="h6" style={{ color: '#DAECF3', fontWeight: 'bold' }}>
           MinistryWare
-        </Typography>
+        </Typography> */}
+        <Box component="img" src={logo} alt="MinistryWare logo" sx={{ height: 30, width: 30, m: 0, mr: 1, }} />
+        <BrandingText variant="h6" component="div" sx={{ lineHeight: '35px' }}>
+          MinistryWare
+        </BrandingText>
 
         <StyledTabs
           value={value}

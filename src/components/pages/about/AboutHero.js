@@ -4,6 +4,7 @@ import { styled } from '@mui/system';
 import { Typewriter } from 'react-simple-typewriter'; // Import the new typewriter library
 import { useInView } from 'react-intersection-observer'; // Import Intersection Observer
 import backgroundImage from '../../../images/woman-prayer-hero-compress.jpg'; // Use your background image
+import Branding from '../../branding/Branding';
 
 // Background Image Styling
 const HeroSection = styled(Box)(({ theme }) => ({
@@ -86,7 +87,9 @@ const AboutHero = () => {
       <Container sx={{
         zIndex: 2,
         height: "inherit",
+        p: "0 !important",
       }}>
+        <Branding />
         <TextBox sx={{ minHeight: "192px", }}>
           <Typography variant="h2" sx={{ fontWeight: 'boldest', minHeight: "77px", fontSize: { xs: '2rem', md: '3rem' } }}>
             <Typewriter

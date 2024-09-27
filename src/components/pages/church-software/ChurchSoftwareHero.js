@@ -6,6 +6,7 @@ import backgroundImage from '../../../images/keyboard-typing-high-quality.gif';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance'; // For Church Website Software
 import SchoolIcon from '@mui/icons-material/School'; // For Education platform
 import ChurchSoftwareHero2 from './churchSoftwareHero2';
+import Branding from '../../branding/Branding';
 
 // Hero section styling
 const HeroSection = styled(Box)(({ theme }) => ({
@@ -72,7 +73,8 @@ const FadeUpAnimation = styled(Box)(({ theme }) => ({
 const ChurchSoftwareHero = () => {
   return (
     <HeroSection>
-      <Container sx={{ zIndex: 2, height: "inherit" }}>
+      <Container sx={{ zIndex: 2, height: "inherit", p: "0 !important" }}>
+        <Branding />
         <ChurchSoftwareHero2 />
         <TextBox sx={{ minHeight: "192px" }}>
           <Typography variant="h2" sx={{ fontWeight: 'boldest', fontSize: { xs: '2rem', md: '3rem' } }}>

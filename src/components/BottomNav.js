@@ -56,13 +56,12 @@ const StyledBottomNavigationAction = styled(BottomNavigationAction)(({ theme }) 
 
 const BottomNav = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTabletOrMobile = useMediaQuery(theme.breakpoints.down('md')); // Include both tablet and mobile
   const location = useLocation();
   const [value, setValue] = React.useState();
 
   // Update tab selection based on the current path
   useEffect(() => {
-    console.log('location.pathname', location.pathname)
     switch (location.pathname) {
       case `${pathPrefix}/`:
         setValue(0);
@@ -81,7 +80,7 @@ const BottomNav = () => {
     }
   }, [location.pathname]);
 
-  if (!isMobile) return null;
+  if (!isTabletOrMobile) return null; // Show only on mobile and tablet
 
   return (
     <StyledBottomNavigation
