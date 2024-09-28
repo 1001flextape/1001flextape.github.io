@@ -71,5 +71,19 @@ module.exports = {
         display: 'swap',
       },
     },
-  ],
+    process.env.NODE_ENV === 'production' && {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          'G-6RXMD06GX9', // Google Analytics / GA
+        ],
+        gtagConfig: {
+          anonymize_ip: true, // Optional: anonymize the IPs
+        },
+        pluginConfig: {
+          head: true, // Optional: Whether to put tracking script in the head or not
+        },
+      },
+    },
+  ].filter(Boolean),
 };
