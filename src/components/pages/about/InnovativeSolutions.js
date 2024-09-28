@@ -20,6 +20,7 @@ const fadeIn = keyframes`
 const SolutionsSection = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.grey[100],
   padding: theme.spacing(8, 0),
+  
 }));
 
 // Image Box Styling

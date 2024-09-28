@@ -36,7 +36,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
   )`,
   [theme.breakpoints.up('md')]: {
     flexDirection: 'row', // Change to row for larger screens
-    height: '60vh', // Shorter height for desktop
+    height: '300px', // Shorter height for desktop
   },
 }));
 
@@ -53,6 +53,7 @@ const TextBox = styled(Box)(({ theme }) => ({
     flexBasis: '50%', // Take up half the space on larger screens
     marginTop: 0, // Remove the margin at the bottom
     padding: theme.spacing(5),
+    backgroundColor: "transparent",
   },
 }));
 
@@ -88,7 +89,15 @@ const FadeUpAnimation = styled(Box)(({ theme }) => ({
 const ChurchSoftwareHero = () => {
   return (
     <HeroSection>
-      <Container sx={{ zIndex: 2, height: "inherit", p: "0 !important", display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
+      <Container sx={{
+        zIndex: 2, 
+        height: "inherit", 
+        p: "0 !important", 
+        display: 'flex', 
+        flexDirection: { xs: 'column', md: 'row' },
+        maxWidth: 'var(--size-content)', // Limit the width for the content
+        margin: "auto",
+      }}>
         <Branding />
         {/* Laptop Animation (Visible only on larger screens) */}
         <LaptopContainer>

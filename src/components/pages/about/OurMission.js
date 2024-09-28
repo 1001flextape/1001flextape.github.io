@@ -28,7 +28,7 @@ const MissionSection = styled(Box)(({ theme }) => ({
 
 // Content Box Styling with fade-in animation
 const ContentBox = styled(Box)(({ theme }) => ({
-  maxWidth: '800px',
+  // maxWidth: '800px',
   padding: theme.spacing(3),
 }));
 
@@ -59,7 +59,9 @@ const OurMission = () => {
 
   return (
     <MissionSection ref={ref}>
-      <Container>
+      <Container sx={{
+        // margin: "auto",
+      }}>
         <ContentBox>
           <Typography variant="h3" sx={{ fontWeight: 'bold', marginBottom: theme.spacing(3) }}>
             {startTypewriter ? (
@@ -79,7 +81,10 @@ const OurMission = () => {
           {startTypewriter && (
             <FadeInTypography
               variant="body1"
-              sx={{ fontSize: '1.25rem', lineHeight: 1.75 }}
+              sx={{
+                fontSize: '1.25rem', lineHeight: 1.75, margin: "auto",
+                textAlign: "justify",
+              }}
             >
               At MinistryWare, we create software that brings people closer together. We believe in the power of technology to enhance faith-based connections, and we are committed to building solutions that enable communities to flourish.
             </FadeInTypography>

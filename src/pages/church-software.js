@@ -25,7 +25,10 @@ const ChurchSoftwarePage = () => (
       {/* <Timeline /> */}
 
       {/* Section: RCM */}
-      <div style={{ margin: "60px 0" }}>
+      <div style={{
+        maxWidth: 'var(--size-content)', // Limit the width for the content
+        margin: '50px auto',
+      }}>
         <h3>RCM (React Component Management System)</h3>
         <p>
           The RCM is a pioneering digital platform designed to handle website generation with
@@ -41,7 +44,10 @@ const ChurchSoftwarePage = () => (
       </div>
 
       {/* Section: Website */}
-      <div style={{ margin: "60px 0" }}>
+      <div style={{
+        maxWidth: 'var(--size-content)', // Limit the width for the content
+        margin: '50px auto',
+      }}>
         <h3>Website</h3>
         <p>
           Once RCM is completed, it will serve as the foundation for the church website software.
@@ -52,7 +58,10 @@ const ChurchSoftwarePage = () => (
       </div>
 
       {/* Section: Educational */}
-      <div style={{ margin: "60px 0" }}>
+      <div style={{
+        maxWidth: 'var(--size-content)', // Limit the width for the content
+        margin: '50px auto',
+      }}>
         <h3>Educational</h3>
         <p>
           The RCM is also built with education in mind. It follows xAPI guidelines to ensure full

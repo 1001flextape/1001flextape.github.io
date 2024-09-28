@@ -24,6 +24,10 @@ const HeroSection = styled(Box)(({ theme }) => ({
     // Mobile/Tablet background
     backgroundImage: `url(${backgroundImageMobile})`,
   },
+  [theme.breakpoints.up('md')]: {
+    flexDirection: 'row', // Change to row for larger screens
+    height: '250px', // Shorter height for desktop
+  },
 }));
 
 // "You Matter" text styling with animation

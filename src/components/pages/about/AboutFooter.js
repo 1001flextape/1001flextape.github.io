@@ -48,7 +48,10 @@ const AboutFooter = () => {
 
   return (
     <FooterSection ref={ref} style={{ minHeight: "250px" }}>
-      <Container>
+      <Container sx={{
+        maxWidth: "var(--size-content)",
+        margin: "auto",
+      }}>
         {startAnimation && (
           <>
             {/* First Typography (Title) */}
@@ -57,7 +60,7 @@ const AboutFooter = () => {
             </FadeInTypography>
 
             {/* Second Typography (Description) */}
-            <FadeInTypography variant="body1" sx={{ fontSize: '1.25rem', lineHeight: 1.75 }} delay={0.2}>
+            <FadeInTypography variant="body1" sx={{ fontSize: '1.25rem', lineHeight: 1.75, margin: "auto", }} delay={0.2}>
               Discover how our software solutions can help you connect with your community and spread the good word.
             </FadeInTypography>
           </>
